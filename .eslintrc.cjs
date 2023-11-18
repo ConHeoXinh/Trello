@@ -20,14 +20,13 @@ module.exports = {
     "react/display-name": 0,
 
     //mui
-    rules: {
-      "no-restricted-imports": [
-        "error",
-        {
-          patterns: ["@mui/*/*/*"],
-        },
-      ],
-    },
+
+    "no-restricted-imports": [
+      "error",
+      {
+        patterns: ["@mui/*/*/*"],
+      },
+    ],
 
     //common
     "no-console": 1,
@@ -39,8 +38,8 @@ module.exports = {
     "space-before-blocks": ["error", "always"],
     "object-curly-spacing": [1, "always"],
     indent: ["warn", 2],
-    // semi: [1, "never"],
-    quotes: ["error", "double"],
+    semi: [1, "never"],
+    quotes: ["error", "single"],
     "array-bracket-spacing": 1,
     "linebreak-style": 0,
     "no-unexpected-multiline": "warn",

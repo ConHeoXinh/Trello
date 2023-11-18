@@ -1,9 +1,12 @@
+import { Box, FormControl, InputLabel, MenuItem, Select } from '@mui/material'
+import React from 'react'
+
 function ModeSelect() {
-  const [age, setAge] = React.useState("");
+  const [age, setAge] = React.useState('')
 
   const handleChange = (event) => {
-    setAge(event.target.value);
-  };
+    setAge(event.target.value)
+  }
 
   return (
     <Box sx={{ minWidth: 120 }}>
@@ -21,7 +24,8 @@ function ModeSelect() {
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
       </FormControl>
-      s
     </Box>
-  );
+  )
 }
+export default ModeSelect
+
