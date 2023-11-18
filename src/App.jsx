@@ -1,34 +1,54 @@
 /* eslint-disable react/jsx-no-target-blank */
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+
+import {
+  Box,
+  Container,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+} from "@mui/material";
+import theme from "./theme";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Container disableGutters maxWidth={false} sx={{ hegight: "100vh" }}>
+        <Box
+          sx={{
+            backgroundColor: "primary.light",
+            height: (theme) => theme.trello.appBarHeight,
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <ModeSelect>sdf</ModeSelect>
+        </Box>
+        <Box
+          sx={{
+            backgroundColor: "primary.dark",
+            height: (theme) => theme.trello.boardBarHeight,
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          board bar
+        </Box>
+        <Box
+          sx={{
+            backgroundColor: "primary.light",
+            height: (theme) =>
+              `calc(100vh-${theme.trello.appBarHeight}-${theme.trello.boardBarHeight})`,
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          content
+        </Box>
+      </Container>
     </>
   );
 }
