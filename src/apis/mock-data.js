@@ -187,6 +187,15 @@ export const mockData = {
             attachments: []
           }
         ]
+      },
+      {
+        _id: 'column-id-04',
+        boardId: 'coard-id-01',
+        title: 'Empty column 04',
+        cardOrderIds: ['column-id-04-placeholder-card'],
+        cards: [
+          { _id: 'column-id-04-placeholder-card', boardId: 'board-id-01', columnId: 'column-id-04', FE_PlaceholderCard: true }
+        ]
       }
     ]
   }
